@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 import { GiphyTrendingComponent } from './components/giphy-trending/giphy-trending.component';
+import { GiphyRandomComponent } from './components/giphy-random/giphy-random.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
     GiphyDisplayComponent,
-    GiphyTrendingComponent
+    GiphyTrendingComponent,
+    GiphyRandomComponent
   ],
   imports: [
     BrowserModule,
