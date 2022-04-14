@@ -1,1 +1,11 @@
-<p>giphy-trending works!</p>
+<div class="container">
+    <h1 class="text-center" style="margin-top: 60px">Trending Gifs</h1>
+    <div class="card-columns">
+        <div *ngFor="let trendingGif of trendingGifs; index as i">
+            <div class="card" style="border: none;">
+                <a href="trendingGif.url" target="_blank"><img src="{{trendingGif.images.preview_webp.url}}" alt=""
+                        width="100%"></a>
+            </div>
+        </div>
+    </div>
+</div>
