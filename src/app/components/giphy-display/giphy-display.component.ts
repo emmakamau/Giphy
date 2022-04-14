@@ -14,7 +14,7 @@ export class GiphyDisplayComponent implements OnInit {
 
   constructor(private gifServices:GiphyServicesService) { }
 
-  searchGifs(){
+  ngOnInit(): void {
     this.gifServices.searchGifs(this.searchQuery);
     this.gifServices.displayGifs().subscribe(results => {
       console.log(results['data']);
@@ -24,7 +24,5 @@ export class GiphyDisplayComponent implements OnInit {
     });
     this.searchQuery = '';
   }
-
-  ngOnInit(): void {}
 
 }
