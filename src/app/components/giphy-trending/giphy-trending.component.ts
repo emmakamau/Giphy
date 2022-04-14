@@ -7,14 +7,13 @@ import { GiphyServicesService } from 'src/app/services/giphy-services.service';
   styleUrls: ['./giphy-trending.component.css']
 })
 export class GiphyTrendingComponent implements OnInit {
-  trendingGifs:any;
+  trendingGifs: any;
 
   constructor(private gifService:GiphyServicesService) { }
 
   ngOnInit(): void {
     this.gifService.trendingGifs()
     .subscribe(response => {
-      // tslint:disable-next-line: no-string-literal
       this.trendingGifs = response['data'];
     });
   }
