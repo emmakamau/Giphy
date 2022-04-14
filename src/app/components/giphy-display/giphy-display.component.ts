@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GiphyServicesService } from 'src/app/services/giphy-services.service';
 
 @Component({
   selector: 'app-giphy-display',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./giphy-display.component.css']
 })
 export class GiphyDisplayComponent implements OnInit {
+  gifs:any;
 
-  constructor() { }
+  constructor(private gifServices:GiphyServicesService) { }
 
   ngOnInit(): void {
+    this.gifServices.displayGifs().subscribe(response =>{
+      this.gifs = response['data']
+    })
+
   }
 
 }

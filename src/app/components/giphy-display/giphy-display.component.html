@@ -1,1 +1,9 @@
-<p>giphy-display works!</p>
+<div class="row main-display">
+    <div class="col-3" *ngFor="let gif of gifs; index as i">
+        <div>
+            <div class="card" style="border: none;">
+                <a href="gif.url" target="_blank"><img src="{{gif.images.preview_webp.url}}" alt="" width="100%"></a>
+            </div>
+        </div>
+    </div>
+</div>

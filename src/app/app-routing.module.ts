@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+//Import components
 import { GiphyTrendingComponent } from './components/giphy-trending/giphy-trending.component';
+import { GiphyDisplayComponent } from './components/giphy-display/giphy-display.component';
 
 const routes: Routes = [
-  {path:'trending',component:GiphyTrendingComponent} //Define the path,name and component
+  //Define the path and component
+  {path:'',component:GiphyDisplayComponent},
+  {path:'trending',component:GiphyTrendingComponent} 
 ];
 
 @NgModule({
