@@ -13,8 +13,7 @@ export class GiphyTrendingComponent implements OnInit {
 
   ngOnInit(): void {
     //Get response from the api through the service
-    this.gifService.trendingGifs()
-    .subscribe(response => {
+    this.gifService.trendingGifs().subscribe(response => {
       this.trendingGifs = response['data'];
     });
   }
